@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+html,h1,h2,h3,h4,h5,h6,a,p,button,input{
+ font-family: "Raleway";
+}
+
+.navbar{
+ background:#FF9D08;
+}
+.nav-link , .navbar-brand{
+ color: #f4f4f4;
+ cursor: pointer;
+}
+.navbar-collapse{
+ justify-content: flex-end;
+}
+
+.navbar-button{
+ color: #f4f4f4;
+}
+
+.navbar-button:hover{
+ background-color: #f4f4f4;
+ color:#FF9D08;
+}
+
+.auth-button{
+ color: #f4f4f4;
+ background-color:#FF9D08;
+}
+
+.header{
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+ height: 60px;
+}
+
+.audio-card .card{
+ box-shadow: 0 0 20px #ccc;
+}
+
+/*.audio-card .card-body{
+ padding: 1em;
+}*/
+
+.audio-card .card-title{
+/* color:#FF9D08; */
+}
+
+.load-more-button{
+/* color: #f4f4f4;
+ background-color: #FF9D08;*/
+ color: #20202F;
+ background-color: #D5D5D6;
+}
+
+.before-footer{
+ background-attachment: fixed;
+ background-size: cover;
+ background-position: center;
+ height: 390px;
+}
+
+.page-footer{
+ background:#20202F;
+}
+
+.footer-copyright{
+ color: #f4f4f4;
+}

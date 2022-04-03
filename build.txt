@@ -1,0 +1,18 @@
+elasticsearch и postgreSQL:
+	. ➤ docker-compose up
+
+backend:
+	./backend ➤ . env/bin/activate 
+	./backend ➤ python manage.py runserver
+	./backend ➤ python manage.py search_index --rebuild
+
+frontend:
+	./frontend ➤ node server
+
+scribe:
+	./scribe ➤ wget https://alphacephei.com/kaldi/models/vosk-model-ru-0.22.zip
+	./scribe ➤ unzip vosk-model-ru-0.22.zip
+	./scribe ➤ mv vosk-model-ru-0.22 model
+	./scribe ➤ . env/bin/activate 
+	./scribe ➤ export FLASK_APP=transcribe
+	./scribe ➤ Flask run

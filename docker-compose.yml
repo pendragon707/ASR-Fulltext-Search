@@ -1,0 +1,38 @@
+services:
+    db:
+      build: db
+        #      volumes:
+        #        - ./db/data:/var/lib/postgres/data
+      ports:
+        - "5432:5432" # psql
+      secrets:
+        - psql_password
+      environment:
+        - POSTGRES_DB=db
+        - POSTGRES_USER=db
+        - POSTGRES_PASSWORD=3
+      networks:
+        - db
+          #    environment:
+          #      - PGDATA=/db/pgdata
+          
+    elasticsearch:
+      build: elasticsearch/
+      volumes:
+        - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,z
+        - ./elasticsearch/config/stop.txt:/usr/share/elasticsearch/config/stop.txt:ro,z
+#        - elasticsearch:/usr/share/elasticsearch/data:z
+      ports:
+        - "9200:9200" # http
+        - "9300:9300"
+      environment:
+        - discovery.type=single-node
+        - xpack.security.enabled=false
+#        - ES_JAVA_OPTS=-Xmx256m -Xms256m
+
+networks:
+  db: { }
+
+secrets:
+  psql_password:
+    file: ./psql_password.txt

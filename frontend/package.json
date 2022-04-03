@@ -1,14 +1,27 @@
 {
-  "name": "frontend",
+  "name": "Search",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "node server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": {
+    "name": "Natalia Podoprigorova",
+    "email": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
   "license": "ISC",
   "devDependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.3"
+  },
+  "dependencies": {
+    "bootstrap-fileinput": "^5.2.8",
+    "express-favicon": "^2.0.1",
+    "mdb-ui-kit": "^4.0.0"
   }
 }
